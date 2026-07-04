@@ -1,6 +1,4 @@
 import { Clock, Sparkles, Target } from "lucide-react";
-import consultora from "@/assets/kria-consultora.jpg";
-import { KriaLogo } from "./KriaLogo";
 
 const BENEFITS = [
   { icon: Clock, title: "2 a 5 min", sub: "para responder" },
@@ -16,8 +14,8 @@ export function Hero() {
         <div className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-kria-orange/20 blur-3xl" />
       </div>
 
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:gap-14 lg:px-8 lg:py-20">
-        <div className="min-w-0">
+      <div className="mx-auto max-w-4xl px-4 py-14 text-center sm:px-6 lg:px-8 lg:py-20">
+        <div className="mx-auto min-w-0">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-kria-purple/20 bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-kria-purple backdrop-blur">
             <Sparkles className="h-3.5 w-3.5" />
             Diagnóstico gratuito
