@@ -24,7 +24,7 @@ export function Hero() {
             Descubra o que está travando{" "}
             <span className="text-gradient-orange">sua presença digital</span>
           </h1>
-          <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
+          <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
             Receba um diagnóstico personalizado do seu negócio, marca pessoal ou projeto e descubra o
             que realmente precisa mudar para crescer.
           </p>
@@ -46,7 +46,7 @@ export function Hero() {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a
               href="#diagnostico"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-kria-orange to-[oklch(0.68_0.2_30)] px-6 py-3 text-sm font-semibold text-white shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.02]"
