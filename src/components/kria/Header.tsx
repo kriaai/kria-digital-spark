@@ -1,5 +1,6 @@
 import { Menu, Sparkles } from "lucide-react";
 import { useState } from "react";
+import { KriaLogo } from "./KriaLogo";
 
 const NAV = [
   { label: "Início", href: "#inicio" },
@@ -17,9 +18,7 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4 lg:flex lg:justify-between">
           <a href="#inicio" className="flex min-w-0 items-center gap-3">
-            <div className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-kria-purple to-kria-purple-deep text-white shadow-[var(--shadow-soft)]">
-              <span className="font-display text-xl font-black">K</span>
-            </div>
+            <KriaLogo className="h-11 w-11 shrink-0 object-contain" />
             <div className="min-w-0 leading-tight">
               <div className="truncate font-display text-lg font-bold text-foreground">Kria AI</div>
               <div className="truncate text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
