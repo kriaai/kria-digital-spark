@@ -1,5 +1,6 @@
 import { Clock, Sparkles, Target } from "lucide-react";
 import consultora from "@/assets/kria-consultora.jpg";
+import { KriaLogo } from "./KriaLogo";
 
 const BENEFITS = [
   { icon: Clock, title: "2 a 5 min", sub: "para responder" },
@@ -74,9 +75,7 @@ export function Hero() {
               className="h-full w-full object-cover"
             />
             <div className="absolute bottom-4 right-4 flex items-center gap-2 rounded-2xl bg-white/90 px-3 py-2 shadow-[var(--shadow-soft)] backdrop-blur">
-              <div className="grid h-8 w-8 place-items-center rounded-lg bg-kria-orange text-white">
-                <span className="font-display text-sm font-black">K</span>
-              </div>
+              <KriaLogo className="h-8 w-8 shrink-0 object-contain" />
               <div className="leading-tight">
                 <div className="text-xs font-bold text-foreground">Kria AI</div>
                 <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
