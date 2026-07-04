@@ -64,27 +64,6 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-          <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-kria-purple/30 via-kria-purple/10 to-kria-orange/20 blur-2xl" />
-          <div className="relative overflow-hidden rounded-[2rem] border border-white/60 shadow-[var(--shadow-card)]">
-            <img
-              src={consultora}
-              alt="Consultora Kria AI"
-              width={1024}
-              height={1280}
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute bottom-4 right-4 flex items-center gap-2 rounded-2xl bg-white/90 px-3 py-2 shadow-[var(--shadow-soft)] backdrop-blur">
-              <KriaLogo className="h-8 w-8 shrink-0 object-contain" />
-              <div className="leading-tight">
-                <div className="text-xs font-bold text-foreground">Kria AI</div>
-                <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
-                  Estratégia & Resultados
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
