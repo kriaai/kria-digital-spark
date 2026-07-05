@@ -11,17 +11,17 @@ export function FinalCTA() {
           </div>
           <div className="min-w-0">
             <h3 className="font-display text-xl font-bold text-foreground sm:text-2xl">
-              Pronto para destravar o crescimento do seu negócio?
+              Pronto para descobrir como a IA pode destravar seu negócio?
             </h3>
             <p className="mt-1 text-sm text-muted-foreground">
-              Leve apenas 2 a 5 minutos e envie seu diagnóstico para a Kria no WhatsApp.
+              Leva de 2 a 5 minutos. Envie sua análise inicial para a Kria no WhatsApp e receba o próximo passo recomendado.
             </p>
           </div>
           <a
             href="#diagnostico"
             className="inline-flex shrink-0 items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-kria-orange to-[oklch(0.68_0.2_30)] px-6 py-3 font-display text-sm font-bold text-white shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.02]"
           >
-            Enviar diagnóstico agora
+            Começar análise inicial
           </a>
         </div>
       </div>
