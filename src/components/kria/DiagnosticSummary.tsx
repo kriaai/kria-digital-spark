@@ -10,12 +10,12 @@ export function DiagnosticSummary({ d, ready }: { d: Diagnosis; ready: boolean }
         </div>
         <div className="min-w-0">
           <h3 className="font-display text-lg font-bold text-foreground sm:text-xl">
-            Seu diagnóstico inicial
+            Seu resumo inicial está pronto
           </h3>
           <p className="mt-1 text-sm text-muted-foreground">
             {ready
-              ? "Com base nas suas respostas, identificamos os principais pontos e traremos sua presença digital a um novo nível."
-              : "Preencha as etapas anteriores para gerar seu diagnóstico personalizado."}
+              ? "Com base nas suas respostas, a Kria vai entender seu cenário e indicar o caminho mais inteligente para você economizar tempo, dinheiro e energia: aprender, automatizar, criar com IA, contratar uma solução pontual ou desenvolver um projeto personalizado."
+              : "Preencha as etapas anteriores para gerar seu resumo inicial personalizado."}
           </p>
         </div>
       </div>
