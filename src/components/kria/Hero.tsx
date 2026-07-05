@@ -1,4 +1,5 @@
 import { Clock, Sparkles, Target } from "lucide-react";
+import modelo from "@/assets/kria-modelo.png.asset.json";
 
 const BENEFITS = [
   { icon: Clock, title: "2 a 5 min", sub: "para responder" },
@@ -14,54 +15,64 @@ export function Hero() {
         <div className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-kria-orange/20 blur-3xl" />
       </div>
 
-      <div className="mx-auto max-w-4xl px-4 py-14 text-center sm:px-6 lg:px-8 lg:py-20">
-        <div className="mx-auto min-w-0">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-kria-purple/20 bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-kria-purple backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5" />
-            Diagnóstico gratuito
-          </div>
-          <h1 className="font-display text-4xl font-bold leading-[1.05] text-foreground sm:text-5xl lg:text-6xl">
-            Descubra o que está travando{" "}
-            <span className="text-gradient-orange">sua presença digital</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
-            Receba um diagnóstico personalizado do seu negócio, marca pessoal ou projeto e descubra o
-            que realmente precisa mudar para crescer.
-          </p>
+      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_1fr]">
+          <div className="min-w-0 text-center lg:text-left">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-kria-purple/20 bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-kria-purple backdrop-blur">
+              <Sparkles className="h-3.5 w-3.5" />
+              Diagnóstico gratuito
+            </div>
+            <h1 className="font-display text-4xl font-bold leading-[1.05] text-foreground sm:text-5xl lg:text-6xl">
+              Descubra o que está travando{" "}
+              <span className="text-gradient-orange">sua presença digital</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg mx-auto lg:mx-0">
+              Receba um diagnóstico personalizado do seu negócio, marca pessoal ou projeto e descubra o
+              que realmente precisa mudar para crescer.
+            </p>
 
-          <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
-            {BENEFITS.map((b) => (
-              <div
-                key={b.title}
-                className="glass-card flex items-center gap-3 rounded-2xl px-4 py-3"
+            <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
+              {BENEFITS.map((b) => (
+                <div
+                  key={b.title}
+                  className="glass-card flex items-center gap-3 rounded-2xl px-4 py-3"
+                >
+                  <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-kria-orange-soft text-kria-orange">
+                    <b.icon className="h-5 w-5" />
+                  </div>
+                  <div className="min-w-0 leading-tight text-left">
+                    <div className="truncate text-sm font-bold text-foreground">{b.title}</div>
+                    <div className="truncate text-xs text-muted-foreground">{b.sub}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
+              <a
+                href="#diagnostico"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-kria-orange to-[oklch(0.68_0.2_30)] px-6 py-3 text-sm font-semibold text-white shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.02]"
               >
-                <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-kria-orange-soft text-kria-orange">
-                  <b.icon className="h-5 w-5" />
-                </div>
-                <div className="min-w-0 leading-tight">
-                  <div className="truncate text-sm font-bold text-foreground">{b.title}</div>
-                  <div className="truncate text-xs text-muted-foreground">{b.sub}</div>
-                </div>
-              </div>
-            ))}
+                Começar meu diagnóstico
+              </a>
+              <a
+                href="#como-funciona"
+                className="inline-flex items-center gap-2 rounded-full border border-kria-purple/25 bg-white px-6 py-3 text-sm font-semibold text-kria-purple hover:bg-kria-purple-soft"
+              >
+                Como funciona
+              </a>
+            </div>
           </div>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a
-              href="#diagnostico"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-kria-orange to-[oklch(0.68_0.2_30)] px-6 py-3 text-sm font-semibold text-white shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.02]"
-            >
-              Começar meu diagnóstico
-            </a>
-            <a
-              href="#como-funciona"
-              className="inline-flex items-center gap-2 rounded-full border border-kria-purple/25 bg-white px-6 py-3 text-sm font-semibold text-kria-purple hover:bg-kria-purple-soft"
-            >
-              Como funciona
-            </a>
+          <div className="relative order-first lg:order-last">
+            <div className="pointer-events-none absolute inset-x-6 bottom-4 -z-10 h-24 rounded-full bg-kria-purple/25 blur-3xl" />
+            <img
+              src={modelo.url}
+              alt="Consultora Kria AI"
+              className="mx-auto w-full max-w-sm object-contain drop-shadow-2xl lg:max-w-md"
+            />
           </div>
         </div>
-
       </div>
     </section>
   );
