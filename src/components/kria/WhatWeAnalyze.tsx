@@ -15,7 +15,7 @@ export function WhatWeAnalyze() {
       <h2 className="text-center font-display text-2xl font-bold text-foreground sm:text-3xl">
         O que a Kria AI analisa para você
       </h2>
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {ITEMS.map((i) => (
           <div
             key={i.title}
