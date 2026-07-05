@@ -1,12 +1,36 @@
-import { Compass, Globe2, PenTool, Users, Lightbulb, Bot } from "lucide-react";
+import { Target, AlertTriangle, Bot, Layers, Wallet, Sparkles } from "lucide-react";
 
 const ITEMS = [
-  { icon: Compass, title: "Posicionamento", desc: "Como sua marca é percebida e o que pode te diferenciar." },
-  { icon: Globe2, title: "Presença Digital", desc: "Seu site, redes sociais e autoridade online." },
-  { icon: PenTool, title: "Estratégia de Conteúdo", desc: "Qualidade, frequência e alinhamento com seu público." },
-  { icon: Users, title: "Aquisição de Clientes", desc: "Como você atrai, converte e fideliza clientes." },
-  { icon: Lightbulb, title: "Oportunidades", desc: "Ações práticas e estratégicas para você crescer." },
-  { icon: Bot, title: "Organização", desc: "Melhore sua empresa com IA." },
+  {
+    icon: Target,
+    title: "Objetivo de crescimento",
+    desc: "Entendemos se você quer vender mais, atrair clientes, criar autoridade, melhorar sua imagem, lançar uma ideia, treinar equipe ou organizar processos.",
+  },
+  {
+    icon: AlertTriangle,
+    title: "Gargalo principal",
+    desc: "Identificamos onde o negócio está travando: conteúdo, design, vídeo, atendimento, vendas, ferramentas, posicionamento, rotina ou falta de estratégia.",
+  },
+  {
+    icon: Bot,
+    title: "Nível com IA e tecnologia",
+    desc: "Mapeamos o que você já sabe usar e o que precisa aprender para produzir mais rápido, se organizar melhor e economizar tempo.",
+  },
+  {
+    icon: Layers,
+    title: "Estrutura atual",
+    desc: "Analisamos se você trabalha sozinho, tem equipe, já possui canais digitais, identidade visual, rotina de conteúdo, atendimento e materiais de venda.",
+  },
+  {
+    icon: Wallet,
+    title: "Orçamento e prioridade",
+    desc: "Com base no investimento disponível, indicamos uma solução realista: algo rápido, uma entrega pontual, uma consultoria, um workshop ou um projeto completo.",
+  },
+  {
+    icon: Sparkles,
+    title: "Solução mais indicada",
+    desc: "A Kria entende se faz mais sentido ensinar, criar por você, automatizar, montar um pack, fazer design, produzir vídeo, criar conteúdo com IA ou conectar você a parceiros.",
+  },
 ];
 
 export function WhatWeAnalyze() {
