@@ -45,7 +45,7 @@ export function Header() {
               className="inline-flex items-center gap-2 rounded-full border border-kria-purple/25 bg-white px-5 py-2.5 text-sm font-semibold text-kria-purple shadow-[var(--shadow-soft)] transition-all hover:bg-kria-purple hover:text-white"
             >
               <Sparkles className="h-4 w-4" />
-              Começar diagnóstico
+              Começar análise
             </a>
           </div>
 
@@ -76,7 +76,7 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 className="mt-1 rounded-xl bg-gradient-to-r from-kria-orange to-kria-orange px-4 py-2.5 text-center text-sm font-semibold text-white"
               >
-                Começar diagnóstico
+                Começar análise
               </a>
             </nav>
           </div>

@@ -1,10 +1,10 @@
-import { Clock, Sparkles, Target } from "lucide-react";
+import { Sparkles, Compass, Wand2, ArrowRight } from "lucide-react";
 import modelo from "@/assets/kria-modelo.png.asset.json";
 
 const BENEFITS = [
-  { icon: Clock, title: "2 a 5 min", sub: "para responder" },
-  { icon: Target, title: "100%", sub: "personalizado" },
-  { icon: Sparkles, title: "Indicação", sub: "estratégica" },
+  { icon: Compass, title: "Leitura inicial", sub: "do seu cenário" },
+  { icon: Wand2, title: "Soluções", sub: "IA, conteúdo e automação" },
+  { icon: ArrowRight, title: "Próximo passo", sub: "recomendado" },
 ];
 
 export function Hero() {
@@ -29,15 +29,16 @@ export function Hero() {
           <div className="min-w-0 text-center lg:text-left">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-kria-purple/20 bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-kria-purple backdrop-blur">
               <Sparkles className="h-3.5 w-3.5" />
-              Diagnóstico gratuito
+              Análise inicial com IA
             </div>
             <h1 className="font-display text-4xl font-bold leading-[1.05] text-foreground sm:text-5xl lg:text-6xl">
-              Descubra o que está travando{" "}
-              <span className="text-gradient-orange">sua presença digital</span>
+              Descubra como a IA pode{" "}
+              <span className="text-gradient-orange">economizar tempo e dinheiro</span> no seu negócio
             </h1>
             <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg mx-auto lg:mx-0">
-              Receba um diagnóstico personalizado do seu negócio, marca pessoal ou projeto e descubra o
-              que realmente precisa mudar para crescer.
+              Responda algumas perguntas para a Kria entender seu cenário e indicar o que você pode
+              fazer sozinho, o que pode otimizar com IA, o que vale contratar e o que a Kria pode
+              resolver para você.
             </p>
 
             <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -62,7 +63,7 @@ export function Hero() {
                 href="#diagnostico"
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-kria-orange to-[oklch(0.68_0.2_30)] px-6 py-3 text-sm font-semibold text-white shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.02]"
               >
-                Começar meu diagnóstico
+                Começar análise inicial
               </a>
               <a
                 href="#como-funciona"

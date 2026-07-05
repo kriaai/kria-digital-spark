@@ -1,9 +1,21 @@
 import { FileText, Search, Send } from "lucide-react";
 
 const STEPS = [
-  { icon: FileText, title: "1. Responda o diagnóstico", desc: "Leva apenas 2 a 5 minutos." },
-  { icon: Search, title: "2. Analisamos estrategicamente", desc: "Nossa IA e a equipe analisam seus dados." },
-  { icon: Send, title: "3. Receba seu plano de ação", desc: "Você recebe no WhatsApp um diagnóstico com recomendações práticas." },
+  {
+    icon: FileText,
+    title: "1. Você conta onde está travando",
+    desc: "Responda sobre seu negócio, projeto, rotina, presença digital, ferramentas, dificuldades e investimento disponível.",
+  },
+  {
+    icon: Search,
+    title: "2. A Kria identifica o melhor caminho",
+    desc: "Analisamos se o seu problema precisa de estratégia, conteúdo, design, vídeo, automação, treinamento, IA ou execução profissional.",
+  },
+  {
+    icon: Send,
+    title: "3. Você decide com mais clareza",
+    desc: "Suas respostas viram um resumo inicial no WhatsApp da Kria. Indicamos o que você pode fazer sozinho, o que pode otimizar com IA, o que vale contratar e o que a Kria pode resolver por você.",
+  },
 ];
 
 export function HowItWorks() {

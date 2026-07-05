@@ -11,17 +11,17 @@ import { Footer } from "@/components/kria/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Kria AI — Diagnóstico da sua presença digital" },
+      { title: "Kria AI — Descubra como a IA pode economizar tempo e dinheiro" },
       {
         name: "description",
         content:
-          "Responda em 2 a 5 minutos e receba um diagnóstico personalizado da sua presença digital direto no WhatsApp. Estratégia, conteúdo e crescimento com a Kria AI.",
+          "Responda algumas perguntas e receba um resumo inicial com o próximo passo recomendado: aprender, automatizar, criar com IA ou contratar uma solução da Kria.",
       },
-      { property: "og:title", content: "Kria AI — Diagnóstico da sua presença digital" },
+      { property: "og:title", content: "Kria AI — Análise inicial com IA para o seu negócio" },
       {
         property: "og:description",
         content:
-          "Descubra o que está travando sua presença digital e receba um plano de ação no WhatsApp.",
+          "Entenda seu cenário e descubra o que fazer sozinho, o que otimizar com IA, o que contratar e o que a Kria pode resolver por você.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

@@ -23,13 +23,13 @@ export function WhatsAppCTA({ href, disabled, missingCount }: Props) {
         }`}
       >
         <WhatsAppIcon className="h-5 w-5" />
-        Enviar diagnóstico para a Kria no WhatsApp
+        Enviar minhas respostas para a Kria no WhatsApp
       </a>
       <p className="flex items-center justify-center gap-2 text-center text-xs text-muted-foreground">
         <Lock className="h-3 w-3" />
         {disabled
           ? `Faltam ${missingCount} campo${missingCount === 1 ? "" : "s"} obrigatório${missingCount === 1 ? "" : "s"} para enviar`
-          : "Clique para enviar suas respostas e receber sua análise personalizada."}
+          : "A análise completa e a proposta personalizada serão feitas no atendimento, de acordo com seu objetivo, urgência, nível de entrega e investimento disponível."}
       </p>
     </div>
   );
