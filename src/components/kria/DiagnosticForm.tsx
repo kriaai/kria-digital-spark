@@ -135,8 +135,11 @@ export function DiagnosticForm() {
           </FormBlock>
 
           <FormBlock number={6} title="Investimento e solução desejada">
-            <Field label="Qual investimento faz sentido para você agora? *">
+            <Field label="Quanto você está disposto(a) a investir para resolver esse problema agora? *">
               <ChipGroup options={INVESTIMENTOS} value={a.investimento} onChange={(v) => set("investimento")(v as string)} />
+            </Field>
+            <Field label="Você prefere:">
+              <ChipGroup options={PREFERENCIAS} value={a.preferencia} onChange={(v) => set("preferencia")(v as string)} />
             </Field>
             <div className="grid gap-4 sm:grid-cols-2">
               <Field label="O que você busca com mais urgência?">
