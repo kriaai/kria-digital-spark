@@ -16,7 +16,16 @@ export function Hero() {
       </div>
 
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_1fr]">
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.15fr]">
+          <div className="relative order-first lg:order-first">
+            <div className="pointer-events-none absolute inset-x-6 bottom-4 -z-10 h-24 rounded-full bg-kria-purple/25 blur-3xl" />
+            <img
+              src={modelo.url}
+              alt="Consultora Kria AI"
+              className="mx-auto w-full max-w-sm object-contain drop-shadow-2xl lg:max-w-md"
+            />
+          </div>
+
           <div className="min-w-0 text-center lg:text-left">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-kria-purple/20 bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-kria-purple backdrop-blur">
               <Sparkles className="h-3.5 w-3.5" />
@@ -62,15 +71,6 @@ export function Hero() {
                 Como funciona
               </a>
             </div>
-          </div>
-
-          <div className="relative order-first lg:order-last">
-            <div className="pointer-events-none absolute inset-x-6 bottom-4 -z-10 h-24 rounded-full bg-kria-purple/25 blur-3xl" />
-            <img
-              src={modelo.url}
-              alt="Consultora Kria AI"
-              className="mx-auto w-full max-w-sm object-contain drop-shadow-2xl lg:max-w-md"
-            />
           </div>
         </div>
       </div>
