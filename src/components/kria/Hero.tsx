@@ -16,13 +16,13 @@ export function Hero() {
       </div>
 
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.15fr]">
-          <div className="relative order-first lg:order-first">
+        <div className="grid items-center gap-4 sm:gap-6 lg:gap-10 grid-cols-[110px_1fr] sm:grid-cols-[160px_1fr] md:grid-cols-[200px_1fr] lg:grid-cols-[1fr_1.15fr]">
+          <div className="relative">
             <div className="pointer-events-none absolute inset-x-6 bottom-4 -z-10 h-24 rounded-full bg-kria-purple/25 blur-3xl" />
             <img
               src={modelo.url}
               alt="Consultora Kria AI"
-              className="mx-auto w-full max-w-sm object-contain drop-shadow-2xl lg:max-w-md"
+              className="mx-auto w-full max-w-[110px] object-contain drop-shadow-2xl sm:max-w-[160px] md:max-w-[200px] lg:max-w-md"
             />
           </div>
 
