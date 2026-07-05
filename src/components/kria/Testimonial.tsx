@@ -32,7 +32,6 @@ export function Testimonial() {
         <div className="grid grid-cols-3 gap-3">
           {[
             { n: "+120", l: "negócios analisados" },
-            { n: "+R$ 8M", l: "impacto gerado" },
             { n: "98%", l: "satisfação dos clientes" },
           ].map((s) => (
             <div key={s.l} className="rounded-2xl border border-border bg-white p-3 text-center">
