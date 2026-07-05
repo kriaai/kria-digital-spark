@@ -9,7 +9,7 @@ function line(label: string, value: string | string[]) {
 
 export function buildWhatsAppMessage(a: Answers, d: Diagnosis): string {
   const parts = [
-    "Olá, Kria AI! Acabei de responder o diagnóstico. 👇",
+    "Olá, Kria AI! Acabei de responder a análise inicial. 👇",
     "",
     "━━ QUEM É VOCÊ ━━",
     line("Nome", a.nome),
@@ -34,15 +34,16 @@ export function buildWhatsAppMessage(a: Answers, d: Diagnosis): string {
     line("Explicação", a.dificuldadeTexto),
     "",
     "━━ FERRAMENTAS E NÍVEL ━━",
-    line("Nível digital", a.nivelDigital),
+    line("Nível digital / IA", a.nivelDigital),
     line("Ferramentas", a.ferramentas),
     "",
     "━━ INVESTIMENTO E SOLUÇÃO ━━",
     line("Investimento", a.investimento),
     line("Solução desejada", a.urgencia),
     line("Prazo", a.prazo),
+    line("Prefere", a.preferencia),
     "",
-    "━━ DIAGNÓSTICO INICIAL ━━",
+    "━━ RESUMO INICIAL ━━",
     `*Maturidade digital:* ${d.maturidade}`,
     "*Pontos de melhoria:*",
     ...d.pontosMelhoria.map((p) => `• ${p}`),
