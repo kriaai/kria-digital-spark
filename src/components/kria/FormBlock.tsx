@@ -33,10 +33,12 @@ export function FormBlock({ number, title, subtitle, children, id, className }: 
   );
 }
 
-export function Field({ label, children }: { label: string; children: ReactNode }) {
+export function Field({ label, children, highlight }: { label: string; children: ReactNode; highlight?: boolean }) {
   return (
     <div>
-      <label className="mb-2 block text-sm font-semibold text-foreground/80">{label}</label>
+      <label className={cn("mb-2 block text-sm font-semibold text-foreground/80", highlight && "text-base font-bold text-foreground")}>
+        {label}
+      </label>
       {children}
     </div>
   );
