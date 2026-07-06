@@ -10,6 +10,7 @@ export type Answers = {
   fase: string;
   presencaDigital: string;
   temSite: string;
+  identidadeVisual: string;
   redes: string[];
   dificuldades: string[];
   dificuldadeTexto: string;
@@ -33,6 +34,7 @@ export const initialAnswers: Answers = {
   fase: "",
   presencaDigital: "",
   temSite: "",
+  identidadeVisual: "",
   redes: [],
   dificuldades: [],
   dificuldadeTexto: "",
@@ -90,7 +92,7 @@ export function buildDiagnosis(a: Answers): Diagnosis {
   const pontosMelhoria: string[] = [];
   if (p <= 1) pontosMelhoria.push("Presença digital ainda pouco visível — falta consistência");
   if (n <= 1) pontosMelhoria.push("Uso de IA e ferramentas pode evoluir para acelerar entregas");
-  if (!a.temSite || a.temSite === "Não") pontosMelhoria.push("Ausência de site/página principal reduz autoridade");
+  if (!a.temSite || a.temSite === "Não tenho") pontosMelhoria.push("Ausência de site/página principal reduz autoridade");
   if (a.redes.length <= 1) pontosMelhoria.push("Baixa presença em canais estratégicos");
   if (a.dificuldades.includes("Ter estratégia")) pontosMelhoria.push("Falta de estratégia clara direcionando as ações");
   if (pontosMelhoria.length === 0) pontosMelhoria.push("Base sólida — foco agora em escala, IA e diferenciação");
