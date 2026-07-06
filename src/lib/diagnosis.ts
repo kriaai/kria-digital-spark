@@ -42,8 +42,10 @@ export const initialAnswers: Answers = {
   dificuldadeTexto: "",
   nivelDigital: "",
   ferramentas: [],
+  ferramentasOutro: "",
   investimento: "",
-  urgencia: "",
+  urgencia: [],
+  urgenciaOutro: "",
   prazo: "",
   preferencia: "",
 };
