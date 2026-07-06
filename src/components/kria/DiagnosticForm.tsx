@@ -17,9 +17,9 @@ const IDENTIDADE_VISUAL = ["Sim", "Não", "Mais ou menos", "Ainda não tenho ide
 const REDES = ["Instagram", "TikTok", "WhatsApp", "YouTube", "Site", "Google Meu Negócio", "Nenhuma"];
 const DIFICULDADES = ["Atrair clientes", "Gerar autoridade", "Criar conteúdo", "Vender mais", "Ter estratégia", "Gerenciar redes sociais", "Anúncios / Tráfego pago", "Fidelizar clientes", "Falta de tempo", "Outro"];
 const NIVEIS = ["Iniciante", "Básico", "Intermediário", "Avançado"];
-const FERRAMENTAS = ["Instagram", "TikTok", "Canva", "CapCut", "ChatGPT", "Claude", "Notion", "Google Drive", "Meta Ads", "WhatsApp Business", "Nenhuma"];
+const FERRAMENTAS = ["Instagram", "TikTok", "Canva", "CapCut", "ChatGPT", "Claude", "Notion", "Google Drive", "Meta Ads", "WhatsApp Business", "Nenhuma", "Outro"];
 const INVESTIMENTOS = ["Até R$200", "R$200 a R$500", "R$500 a R$1.000", "R$1.000 a R$3.000", "R$3.000 a R$7.000", "Acima de R$7.000", "Depende da proposta"];
-const URGENCIAS = ["Análise inicial", "Plano de conteúdo", "Consultoria", "Workshop", "Posts / Design", "Avatar / Book IA", "Edição de vídeo", "Direção + gravação", "Treinamento de equipe", "Automação"];
+const URGENCIAS = ["Conteúdo para redes sociais", "Design / identidade visual", "Vídeos / Reels", "Landing page / site", "Automação de processos", "Organização de ferramentas", "Estratégia de vendas", "Anúncios / tráfego pago", "Treinamento para usar IA", "Diagnóstico completo do negócio", "Outro"];
 const PRAZOS = ["Agora", "Esta semana", "Este mês", "Só pesquisando"];
 const PREFERENCIAS = ["Aprender a fazer sozinho(a)", "Contratar alguém para fazer por mim", "Treinar minha equipe", "Ter uma solução pronta", "Automatizar parte do processo", "Ainda não sei"];
 
@@ -134,6 +134,11 @@ export function DiagnosticForm() {
               </Field>
               <Field label="Quais ferramentas você já utiliza?">
                 <ChipGroup options={FERRAMENTAS} value={a.ferramentas} onChange={(v) => set("ferramentas")(v as string[])} multi />
+                {a.ferramentas.includes("Outro") && (
+                  <div className="mt-3">
+                    <Input value={a.ferramentasOutro} onChange={(e) => set("ferramentasOutro")(e.target.value)} placeholder="Digite o nome da ferramenta" />
+                  </div>
+                )}
               </Field>
             </div>
           </FormBlock>
@@ -147,10 +152,12 @@ export function DiagnosticForm() {
             </Field>
             <div className="grid gap-4 sm:grid-cols-2">
               <Field label="O que você busca com mais urgência?">
-                <Select value={a.urgencia} onChange={(e) => set("urgencia")(e.target.value)}>
-                  <option value="">Selecione sua prioridade</option>
-                  {URGENCIAS.map((u) => <option key={u}>{u}</option>)}
-                </Select>
+                <ChipGroup options={URGENCIAS} value={a.urgencia} onChange={(v) => set("urgencia")(v as string[])} multi />
+                {a.urgencia.includes("Outro") && (
+                  <div className="mt-3">
+                    <Input value={a.urgenciaOutro} onChange={(e) => set("urgenciaOutro")(e.target.value)} placeholder="Digite o que você busca" />
+                  </div>
+                )}
               </Field>
               <Field label="Qual seu prazo?">
                 <ChipGroup options={PRAZOS} value={a.prazo} onChange={(v) => set("prazo")(v as string)} />
