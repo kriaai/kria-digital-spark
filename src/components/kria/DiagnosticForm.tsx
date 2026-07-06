@@ -134,6 +134,11 @@ export function DiagnosticForm() {
               </Field>
               <Field label="Quais ferramentas você já utiliza?">
                 <ChipGroup options={FERRAMENTAS} value={a.ferramentas} onChange={(v) => set("ferramentas")(v as string[])} multi />
+                {a.ferramentas.includes("Outro") && (
+                  <div className="mt-3">
+                    <Input value={a.ferramentasOutro} onChange={(e) => set("ferramentasOutro")(e.target.value)} placeholder="Digite o nome da ferramenta" />
+                  </div>
+                )}
               </Field>
             </div>
           </FormBlock>
