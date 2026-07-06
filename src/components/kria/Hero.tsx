@@ -32,14 +32,16 @@ export function Hero() {
               Análise inicial com IA
             </div>
             <h1 className="font-display text-4xl font-bold leading-[1.05] text-foreground sm:text-5xl lg:text-6xl">
-              Descubra como a IA pode{" "}
-              <span className="text-gradient-orange">economizar tempo e dinheiro</span> no seu negócio
+              Descubra onde a IA pode{" "}
+              <span className="text-gradient-orange">economizar tempo e dinheiro</span> no seu
+              negócio
             </h1>
+
             <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg mx-auto lg:mx-0">
-              Responda algumas perguntas para a Kria entender seu cenário e indicar o que você pode
-              fazer sozinho, o que pode otimizar com IA, o que vale contratar e o que a Kria pode
-              resolver para você.
+              A Kria analisa seu cenário e mostra quais soluções fazem sentido para o seu negócio:
+              conteúdo, automação, design, vídeo ou estratégia.
             </p>
+
 
             <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
               {BENEFITS.map((b) => (
@@ -63,8 +65,9 @@ export function Hero() {
                 href="#diagnostico"
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-kria-orange to-[oklch(0.68_0.2_30)] px-6 py-3 text-sm font-semibold text-white shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.02]"
               >
-                Começar análise inicial
+                Começar diagnóstico
               </a>
+
               <a
                 href="#como-funciona"
                 className="inline-flex items-center gap-2 rounded-full border border-kria-purple/25 bg-white px-6 py-3 text-sm font-semibold text-kria-purple hover:bg-kria-purple-soft"
