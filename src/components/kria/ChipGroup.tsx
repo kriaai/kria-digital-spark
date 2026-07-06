@@ -27,7 +27,7 @@ export function ChipGroup({ options, value, onChange, multi, max, grid }: Props)
   };
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className={cn("gap-2", grid ? "grid grid-cols-1 sm:grid-cols-2" : "flex flex-wrap")}>
       {options.map((opt) => {
         const active = selected.includes(opt);
         return (
@@ -36,14 +36,15 @@ export function ChipGroup({ options, value, onChange, multi, max, grid }: Props)
             type="button"
             onClick={() => toggle(opt)}
             className={cn(
-              "inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-medium transition-all",
+              "inline-flex items-center justify-center gap-1.5 rounded-full border px-4 py-2 text-sm font-medium transition-all",
+              grid && "w-full",
               active
                 ? "border-kria-orange bg-kria-orange-soft text-kria-orange shadow-[var(--shadow-soft)]"
                 : "border-border bg-white text-foreground/70 hover:border-kria-purple/40 hover:text-kria-purple",
             )}
           >
             {opt}
-            {active && <Check className="h-3.5 w-3.5" />}
+            {active && <Check className="h-3.5 w-3.5 shrink-0" />}
           </button>
         );
       })}
