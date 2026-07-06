@@ -127,41 +127,61 @@ export function DiagnosticForm() {
             </Field>
           </FormBlock>
 
-          <FormBlock number={5} title="Ferramentas e nível digital">
-            <div className="grid gap-4 lg:grid-cols-2">
-              <Field label="Qual seu nível de domínio digital? *">
-                <ChipGroup options={NIVEIS} value={a.nivelDigital} onChange={(v) => set("nivelDigital")(v as string)} />
-              </Field>
-              <Field label="Quais ferramentas você já utiliza?">
-                <ChipGroup options={FERRAMENTAS} value={a.ferramentas} onChange={(v) => set("ferramentas")(v as string[])} multi />
-                {a.ferramentas.includes("Outro") && (
-                  <div className="mt-3">
-                    <Input value={a.ferramentasOutro} onChange={(e) => set("ferramentasOutro")(e.target.value)} placeholder="Digite o nome da ferramenta" />
-                  </div>
-                )}
-              </Field>
+          <FormBlock
+            number={5}
+            title="Ferramentas e nível digital"
+            className="border-kria-purple/20 shadow-[var(--shadow-card)]"
+          >
+            <div className="grid gap-5 lg:grid-cols-2">
+              <div className="rounded-2xl border border-border/60 bg-white/50 p-4 sm:p-5">
+                <Field label="Qual seu nível de domínio digital? *" highlight>
+                  <ChipGroup options={NIVEIS} value={a.nivelDigital} onChange={(v) => set("nivelDigital")(v as string)} />
+                </Field>
+              </div>
+              <div className="rounded-2xl border border-border/60 bg-white/50 p-4 sm:p-5">
+                <Field label="Quais ferramentas você já utiliza?" highlight>
+                  <ChipGroup options={FERRAMENTAS} value={a.ferramentas} onChange={(v) => set("ferramentas")(v as string[])} multi />
+                  {a.ferramentas.includes("Outro") && (
+                    <div className="mt-3">
+                      <Input value={a.ferramentasOutro} onChange={(e) => set("ferramentasOutro")(e.target.value)} placeholder="Digite o nome da ferramenta" />
+                    </div>
+                  )}
+                </Field>
+              </div>
             </div>
           </FormBlock>
 
-          <FormBlock number={6} title="Investimento e solução desejada">
-            <Field label="Quanto você está disposto(a) a investir para resolver esse problema agora? *">
-              <ChipGroup options={INVESTIMENTOS} value={a.investimento} onChange={(v) => set("investimento")(v as string)} />
-            </Field>
-            <Field label="Você prefere:">
-              <ChipGroup options={PREFERENCIAS} value={a.preferencia} onChange={(v) => set("preferencia")(v as string)} />
-            </Field>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <Field label="O que você busca com mais urgência?">
-                <ChipGroup options={URGENCIAS} value={a.urgencia} onChange={(v) => set("urgencia")(v as string[])} multi />
-                {a.urgencia.includes("Outro") && (
-                  <div className="mt-3">
-                    <Input value={a.urgenciaOutro} onChange={(e) => set("urgenciaOutro")(e.target.value)} placeholder="Digite o que você busca" />
+          <FormBlock
+            number={6}
+            title="Investimento e solução desejada"
+            className="border-kria-purple/20 shadow-[var(--shadow-card)]"
+          >
+            <div className="space-y-6">
+              <div className="rounded-2xl border border-border/60 bg-white/50 p-4 sm:p-5">
+                <Field label="Quanto você está disposto(a) a investir para resolver esse problema agora? *" highlight>
+                  <ChipGroup options={INVESTIMENTOS} value={a.investimento} onChange={(v) => set("investimento")(v as string)} />
+                </Field>
+              </div>
+              <div className="rounded-2xl border border-border/60 bg-white/50 p-4 sm:p-5">
+                <div className="space-y-6">
+                  <Field label="Você prefere:" highlight>
+                    <ChipGroup options={PREFERENCIAS} value={a.preferencia} onChange={(v) => set("preferencia")(v as string)} />
+                  </Field>
+                  <div className="grid gap-5 sm:grid-cols-2">
+                    <Field label="O que você busca com mais urgência?" highlight>
+                      <ChipGroup options={URGENCIAS} value={a.urgencia} onChange={(v) => set("urgencia")(v as string[])} multi />
+                      {a.urgencia.includes("Outro") && (
+                        <div className="mt-3">
+                          <Input value={a.urgenciaOutro} onChange={(e) => set("urgenciaOutro")(e.target.value)} placeholder="Digite o que você busca" />
+                        </div>
+                      )}
+                    </Field>
+                    <Field label="Qual seu prazo?" highlight>
+                      <ChipGroup options={PRAZOS} value={a.prazo} onChange={(v) => set("prazo")(v as string)} />
+                    </Field>
                   </div>
-                )}
-              </Field>
-              <Field label="Qual seu prazo?">
-                <ChipGroup options={PRAZOS} value={a.prazo} onChange={(v) => set("prazo")(v as string)} />
-              </Field>
+                </div>
+              </div>
             </div>
           </FormBlock>
 

@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
 type Props = {
@@ -6,13 +7,17 @@ type Props = {
   subtitle?: string;
   children: ReactNode;
   id?: string;
+  className?: string;
 };
 
-export function FormBlock({ number, title, subtitle, children, id }: Props) {
+export function FormBlock({ number, title, subtitle, children, id, className }: Props) {
   return (
     <div
       id={id}
-      className="rounded-3xl border border-white/60 bg-white/85 p-5 shadow-[var(--shadow-soft)] backdrop-blur sm:p-7"
+      className={cn(
+        "rounded-3xl border border-white/60 bg-white/85 p-5 shadow-[var(--shadow-soft)] backdrop-blur sm:p-7",
+        className,
+      )}
     >
       <div className="mb-5 flex items-start gap-4">
         <div className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-kria-purple to-kria-purple-deep font-display text-sm font-black text-white">
@@ -28,10 +33,12 @@ export function FormBlock({ number, title, subtitle, children, id }: Props) {
   );
 }
 
-export function Field({ label, children }: { label: string; children: ReactNode }) {
+export function Field({ label, children, highlight }: { label: string; children: ReactNode; highlight?: boolean }) {
   return (
     <div>
-      <label className="mb-2 block text-sm font-semibold text-foreground/80">{label}</label>
+      <label className={cn("mb-2 block text-sm font-semibold text-foreground/80", highlight && "text-base font-bold text-foreground")}>
+        {label}
+      </label>
       {children}
     </div>
   );
