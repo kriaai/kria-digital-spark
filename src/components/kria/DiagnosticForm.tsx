@@ -152,10 +152,12 @@ export function DiagnosticForm() {
             </Field>
             <div className="grid gap-4 sm:grid-cols-2">
               <Field label="O que você busca com mais urgência?">
-                <Select value={a.urgencia} onChange={(e) => set("urgencia")(e.target.value)}>
-                  <option value="">Selecione sua prioridade</option>
-                  {URGENCIAS.map((u) => <option key={u}>{u}</option>)}
-                </Select>
+                <ChipGroup options={URGENCIAS} value={a.urgencia} onChange={(v) => set("urgencia")(v as string[])} multi />
+                {a.urgencia.includes("Outro") && (
+                  <div className="mt-3">
+                    <Input value={a.urgenciaOutro} onChange={(e) => set("urgenciaOutro")(e.target.value)} placeholder="Digite o que você busca" />
+                  </div>
+                )}
               </Field>
               <Field label="Qual seu prazo?">
                 <ChipGroup options={PRAZOS} value={a.prazo} onChange={(v) => set("prazo")(v as string)} />
