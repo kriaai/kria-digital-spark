@@ -7,9 +7,10 @@ type Props = {
   onChange: (v: string | string[]) => void;
   multi?: boolean;
   max?: number;
+  grid?: boolean;
 };
 
-export function ChipGroup({ options, value, onChange, multi, max }: Props) {
+export function ChipGroup({ options, value, onChange, multi, max, grid }: Props) {
   const selected = Array.isArray(value) ? value : value ? [value] : [];
 
   const toggle = (opt: string) => {
