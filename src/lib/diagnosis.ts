@@ -16,8 +16,10 @@ export type Answers = {
   dificuldadeTexto: string;
   nivelDigital: string;
   ferramentas: string[];
+  ferramentasOutro: string;
   investimento: string;
-  urgencia: string;
+  urgencia: string[];
+  urgenciaOutro: string;
   prazo: string;
   preferencia: string;
 };
