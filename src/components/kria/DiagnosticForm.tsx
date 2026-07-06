@@ -167,18 +167,24 @@ export function DiagnosticForm() {
                   <Field label="Você prefere:" highlight>
                     <ChipGroup options={PREFERENCIAS} value={a.preferencia} onChange={(v) => set("preferencia")(v as string)} />
                   </Field>
-                  <div className="grid gap-5 sm:grid-cols-2">
-                    <Field label="O que você busca com mais urgência?" highlight>
-                      <ChipGroup options={URGENCIAS} value={a.urgencia} onChange={(v) => set("urgencia")(v as string[])} multi />
-                      {a.urgencia.includes("Outro") && (
-                        <div className="mt-3">
-                          <Input value={a.urgenciaOutro} onChange={(e) => set("urgenciaOutro")(e.target.value)} placeholder="Digite o que você busca" />
-                        </div>
-                      )}
-                    </Field>
-                    <Field label="Qual seu prazo?" highlight>
-                      <ChipGroup options={PRAZOS} value={a.prazo} onChange={(v) => set("prazo")(v as string)} />
-                    </Field>
+                  <div className="grid gap-5 lg:grid-cols-2">
+                    <div className="rounded-2xl border border-border/60 bg-white/60 p-4 sm:p-5">
+                      <Field label="O que você busca com mais urgência?" highlight>
+                        <p className="mb-3 text-sm text-muted-foreground">Você pode escolher mais de uma opção.</p>
+                        <ChipGroup options={URGENCIAS} value={a.urgencia} onChange={(v) => set("urgencia")(v as string[])} multi grid />
+                        {a.urgencia.includes("Outro") && (
+                          <div className="mt-3">
+                            <Input value={a.urgenciaOutro} onChange={(e) => set("urgenciaOutro")(e.target.value)} placeholder="Digite o que você busca" />
+                          </div>
+                        )}
+                      </Field>
+                    </div>
+                    <div className="rounded-2xl border border-border/60 bg-white/60 p-4 sm:p-5">
+                      <Field label="Qual seu prazo?" highlight>
+                        <p className="mb-3 text-sm text-muted-foreground">Escolha o prazo que mais combina com seu momento.</p>
+                        <ChipGroup options={PRAZOS} value={a.prazo} onChange={(v) => set("prazo")(v as string)} grid />
+                      </Field>
+                    </div>
                   </div>
                 </div>
               </div>
