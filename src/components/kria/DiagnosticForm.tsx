@@ -7,12 +7,13 @@ import { WhatsAppCTA } from "./WhatsAppCTA";
 import { initialAnswers, buildDiagnosis, type Answers } from "@/lib/diagnosis";
 import { buildWhatsAppMessage } from "@/lib/whatsapp";
 
-const TIPOS = ["Empreendedor(a)", "Profissional liberal", "Empresa / Negócio", "Criador(a) de conteúdo", "Outro"];
-const PAPEIS = ["Fundador(a) / Proprietário(a)", "Social media", "Gestor(a)", "Artista / Criador(a)", "Vendedor(a)", "Outro"];
+const TIPOS = ["Autônomo(a)", "Empresa / Negócio", "Criador(a) de conteúdo", "Estudante", "Curioso(a) sobre IA", "Outro"];
+const PAPEIS = ["Dono(a) do negócio", "Responsável pelo marketing", "Vendedor(a) / Comercial", "Criador(a) de conteúdo", "Prestador(a) de serviço", "Estudante / Aprendiz", "Quero aprender a usar IA", "Quero melhorar meu negócio com IA", "Outro"];
 const SEGMENTOS = ["Saúde", "Beleza", "Moda", "Gastronomia", "Educação", "Arte / Música", "Serviços", "Loja / Produto físico", "Influencer / Lifestyle", "Tecnologia", "Outro"];
 const FASES = ["Estou começando", "Validando ideia", "Em crescimento", "Consolidado", "Outro"];
 const PRESENCA = ["Inexistente", "Muito fraca", "Regular", "Boa", "Muito forte"];
-const SITE = ["Sim", "Não", "Em construção"];
+const SITE = ["Sim, tenho site", "Sim, tenho landing page", "Tenho os dois", "Não tenho", "Em construção"];
+const IDENTIDADE_VISUAL = ["Sim", "Não", "Mais ou menos", "Ainda não tenho identidade visual", "Quero melhorar minha identidade visual"];
 const REDES = ["Instagram", "TikTok", "WhatsApp", "YouTube", "Site", "Google Meu Negócio", "Nenhuma"];
 const DIFICULDADES = ["Atrair clientes", "Gerar autoridade", "Criar conteúdo", "Vender mais", "Ter estratégia", "Gerenciar redes sociais", "Anúncios / Tráfego pago", "Fidelizar clientes", "Falta de tempo", "Outro"];
 const NIVEIS = ["Iniciante", "Básico", "Intermediário", "Avançado"];
@@ -107,13 +108,16 @@ export function DiagnosticForm() {
               <ChipGroup options={PRESENCA} value={a.presencaDigital} onChange={(v) => set("presencaDigital")(v as string)} />
             </Field>
             <div className="grid gap-4 sm:grid-cols-2">
-              <Field label="Você possui site ou página principal?">
+              <Field label="Você possui site ou landing page?">
                 <ChipGroup options={SITE} value={a.temSite} onChange={(v) => set("temSite")(v as string)} />
               </Field>
               <Field label="Redes ativas">
                 <ChipGroup options={REDES} value={a.redes} onChange={(v) => set("redes")(v as string[])} multi />
               </Field>
             </div>
+            <Field label="Você mantém a identidade visual da sua marca nas redes sociais?">
+              <ChipGroup options={IDENTIDADE_VISUAL} value={a.identidadeVisual} onChange={(v) => set("identidadeVisual")(v as string)} />
+            </Field>
           </FormBlock>
 
           <FormBlock number={4} title="Suas maiores dificuldades" subtitle="Selecione até 3.">
