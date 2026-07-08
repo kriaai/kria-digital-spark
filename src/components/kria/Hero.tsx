@@ -29,7 +29,7 @@ export function Hero() {
 
           <div className="min-w-0 text-center lg:text-left">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-kria-purple/20 bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-kria-purple backdrop-blur">
-              <Sparkles className="h-3.5 w-3.5" />
+              <KriaLogo className="h-4 w-4 object-contain" />
               Análise inicial com IA
             </div>
             <h1 className="font-display text-4xl font-bold leading-[1.05] text-foreground sm:text-5xl lg:text-6xl">
