@@ -29,7 +29,7 @@ export function Hero() {
 
           <div className="min-w-0 text-center lg:text-left">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-kria-purple/20 bg-transparent px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-kria-purple">
-              <KriaLogo className="h-6 w-6 object-contain" />
+              <KriaLogo className="h-7 w-7 object-contain" />
               Análise inicial com IA
             </div>
             <h1 className="font-display text-4xl font-bold leading-[1.05] text-foreground sm:text-5xl lg:text-6xl">
