@@ -27,19 +27,7 @@ const STEPS = [
 export function HowItWorks() {
   return (
     <section id="como-funciona" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-      <div className="mx-auto max-w-3xl text-center">
-        <span className="inline-flex items-center rounded-full border border-kria-purple/20 bg-kria-purple-soft px-3 py-1 text-xs font-semibold uppercase tracking-wider text-kria-purple-deep">
-          Diagnóstico Kria AI
-        </span>
-        <h2 className="mt-4 font-display text-3xl font-bold text-foreground sm:text-4xl">
-          Como funciona o diagnóstico da <span className="text-kria-purple">Kria</span>
-        </h2>
-        <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-          Em poucos passos, a Kria entende seu cenário, identifica oportunidades e mostra o melhor caminho para usar IA, conteúdo, design, vídeo, automação ou estratégia no seu negócio.
-        </p>
-      </div>
-
-      <div className="mt-12 grid gap-6 md:grid-cols-3 md:gap-5 lg:gap-7">
+      <div className="grid gap-6 md:grid-cols-3 md:gap-5 lg:gap-7">
         {STEPS.map((s) => (
           <article
             key={s.title}
