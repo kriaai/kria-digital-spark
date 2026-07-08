@@ -1,4 +1,5 @@
-import { Sparkles, Compass, Wand2, ArrowRight } from "lucide-react";
+import { Compass, Wand2, ArrowRight } from "lucide-react";
+import { KriaLogo } from "./KriaLogo";
 import modelo from "@/assets/kria-modelo.png.asset.json";
 
 const BENEFITS = [
