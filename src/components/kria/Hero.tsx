@@ -33,9 +33,9 @@ export function Hero() {
               Análise inicial com IA
             </div>
             <h1 className="font-display text-4xl font-bold leading-[1.05] text-foreground sm:text-5xl lg:text-6xl">
-              Descubra onde a IA pode{" "}
-              <span className="text-gradient-orange">economizar tempo e dinheiro</span> no seu
-              negócio
+              Descubra como ECONOMIZAR{" "}
+              <span className="text-gradient-orange">tempo</span> e{" "}
+              <span className="text-gradient-orange">dinheiro</span> no seu negócio
             </h1>
 
             <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg mx-auto lg:mx-0">
