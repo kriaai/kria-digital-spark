@@ -1,6 +1,6 @@
 import { Compass, Wand2, ArrowRight } from "lucide-react";
 import { KriaLogo } from "./KriaLogo";
-import modelo from "@/assets/kria-modelo.png.asset.json";
+
 
 const BENEFITS = [
   { icon: Compass, title: "Leitura inicial", sub: "do seu cenário" },
@@ -21,7 +21,7 @@ export function Hero() {
           <div className="relative hidden sm:block">
             <div className="pointer-events-none absolute inset-x-6 bottom-4 -z-10 h-24 rounded-full bg-kria-purple/25 blur-3xl" />
             <img
-              src={modelo.url}
+              src="/images/consultora-kria.webp"
               alt="Consultora Kria AI"
               className="mx-auto w-full max-w-[160px] object-contain drop-shadow-2xl md:max-w-[200px] lg:max-w-md"
             />
