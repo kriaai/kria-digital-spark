@@ -21,7 +21,7 @@ export function Hero() {
           <div className="relative hidden sm:block">
             <div className="pointer-events-none absolute inset-x-6 bottom-4 -z-10 h-24 rounded-full bg-kria-purple/25 blur-3xl" />
             <img
-              src="/images/consultora-kria.webp"
+              src="/images/consultora-kria.png"
               alt="Consultora Kria AI"
               className="mx-auto w-full max-w-[160px] object-contain drop-shadow-2xl md:max-w-[200px] lg:max-w-md"
             />
