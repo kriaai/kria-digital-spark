@@ -1,6 +1,6 @@
 import { Compass, Wand2, ArrowRight } from "lucide-react";
 import { KriaLogo } from "./KriaLogo";
-import modelo from "@/assets/kria-modelo.png.asset.json";
+
 
 const BENEFITS = [
   { icon: Compass, title: "Leitura inicial", sub: "do seu cenário" },
